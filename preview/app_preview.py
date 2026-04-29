@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw
 import sys
-sys.path.insert(0, '..')
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + '/..')
 from styles import *
 from components import *
 
@@ -21,7 +22,7 @@ def create_home_screen():
     draw_text(draw, "Cash Out", 240, 220, TEXT_COLOR)
 
     # Quick Earn Section
-    draw_text(draw, "Quick Earn", 20, 300, TEXT_COLOR)
+    draw_text(draw, "Quick Earn", 20, 300, TEXT_COLOR, FONT_SIZE_LARGE)
 
     options = ["Videos", "Surveys", "Games", "Tasks"]
     y = 340
